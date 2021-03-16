@@ -29,24 +29,28 @@ remove01.addEventListener("click", remove01Click);
 
 
 function value00Change(event) {
-    console.log(event.target.value);
+    if (value00.value < 0) {
+        value00.value = 0;
+    }
     update00();
 };
 function increase00Click(event) {
     let _is = parseInt(value00.value);
     value00.value = String(_is + 1);
-    console.log(value00.value);
     update00();
 };
 function decrease00Click(event) {
     let _is = parseInt(value00.value);
     value00.value = String(_is - 1);
-    console.log(value00.value);
+    if (value00.value < 0) {
+        value00.value = 0;
+    }
     update00();
 };
 function remove00Click(event) {
-    value00.parentElement.parentElement.parentElement.remove();
+    value00.value = 0;
     update00();
+    value00.parentElement.parentElement.parentElement.remove();
 };
 function update00() {
     let _is = parseInt(value00.value);
@@ -63,24 +67,28 @@ function update00() {
 
 
 function value01Change(event) {
-    console.log(event.target.value);
+    if (value01.value < 0) {
+        value01.value = 0;
+    }
     update01();
 };
 function increase01Click(event) {
     let _is = parseInt(value01.value);
     value01.value = String(_is + 1);
-    console.log(value01.value);
     update01();
 };
 function decrease01Click(event) {
     let _is = parseInt(value01.value);
     value01.value = String(_is - 1);
-    console.log(value01.value);
+    if (value01.value < 0) {
+        value01.value = 0;
+    }
     update01();
 };
 function remove01Click(event) {
-    value01.parentElement.parentElement.parentElement.remove();
+    value01.value = 0;
     update01();
+    value01.parentElement.parentElement.parentElement.remove();
 };
 function update01() {
     let _is = parseInt(value01.value);
